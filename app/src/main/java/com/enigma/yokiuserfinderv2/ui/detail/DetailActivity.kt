@@ -1,14 +1,19 @@
 package com.enigma.yokiuserfinderv2.ui.detail
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
+import androidx.viewpager.widget.ViewPager
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
+import com.enigma.yokiuserfinderv2.R
 import com.enigma.yokiuserfinderv2.databinding.ActivityDetailBinding
 import com.enigma.yokiuserfinderv2.model.detail.DetailViewModel
+import com.google.android.material.tabs.TabLayout
+import com.enigma.yokiuserfinderv2.adapter.PagerAdapter
 
 class DetailActivity : AppCompatActivity() {
 
@@ -19,6 +24,7 @@ class DetailActivity : AppCompatActivity() {
     private lateinit var detailBinding: ActivityDetailBinding
     private lateinit var detailViewModel: DetailViewModel
 
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         detailBinding = ActivityDetailBinding.inflate(layoutInflater)
@@ -26,6 +32,9 @@ class DetailActivity : AppCompatActivity() {
 
         // Mendapatkan username dari Intent
         val username = intent.getStringExtra(EXTRA_USERNAME)
+
+        val bundle = Bundle()
+        bundle.putString(EXTRA_USERNAME, username)
 
         // Inisialisasi DetailViewModel
         detailViewModel = ViewModelProvider(this)[DetailViewModel::class.java]
@@ -55,6 +64,14 @@ class DetailActivity : AppCompatActivity() {
                 }
             }
         }
+
+
+        val pagerAdapter = PagerAdapter(this, supportFragmentManager, bundle)
+        detailBinding.apply {
+            viewPager.adapter = pagerAdapter
+            tab.setupWithViewPager(viewPager)
+        }
+
     }
 
     // Fungsi untuk menampilkan pesan Toast

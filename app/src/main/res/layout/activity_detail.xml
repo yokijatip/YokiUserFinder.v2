@@ -28,7 +28,7 @@
 
     </androidx.cardview.widget.CardView>
 
-<!--    Followers & Following -->
+<!--    FollowersFragment & Following -->
     <androidx.cardview.widget.CardView
         android:background="@android:color/transparent"
         android:id="@+id/container_following_followers"

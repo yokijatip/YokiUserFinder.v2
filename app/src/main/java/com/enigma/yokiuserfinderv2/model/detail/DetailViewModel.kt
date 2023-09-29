@@ -4,8 +4,6 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.enigma.yokiuserfinderv2.data.remote.response.UserData
-import com.enigma.yokiuserfinderv2.data.remote.response.UserDetailData
 import com.enigma.yokiuserfinderv2.data.remote.response.UserDetailResponse
 import com.enigma.yokiuserfinderv2.data.remote.retrofit.Client
 import retrofit2.Call

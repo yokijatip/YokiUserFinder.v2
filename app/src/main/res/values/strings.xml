@@ -6,12 +6,16 @@
     <string name="btn_back">Kembali</string>
 
 <!--    Detail User -->
-    <string name="tv_followers">Followers</string>
-    <string name="tv_following">Following</string>
+    <string name="tv_followers">Following</string>
+    <string name="tv_following">Followers</string>
 
 <!--    Title Tab -->
     <string name="tab1">Followers</string>
     <string name="tab2">Following</string>
+
+<!--    Judul Tab -->
+    <string name="tab_1">Followers</string>
+    <string name="tab_2">Following</string>
 
 
 </resources>

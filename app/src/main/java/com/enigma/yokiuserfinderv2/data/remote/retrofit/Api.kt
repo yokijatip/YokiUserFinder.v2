@@ -12,7 +12,7 @@ import retrofit2.http.Query
 interface Api {
 
 //  Token di set satu kali, ini saran dari Dicoding, yakali masih kena plagiat :P
-    @Headers("Authorization: token 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")
+    @Headers("Authorization: token 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")
 
 //    Query user
     @GET("users")

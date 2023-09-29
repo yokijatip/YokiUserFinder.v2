@@ -51,7 +51,8 @@ android {
 
 dependencies {
 
-//    Room
+implementation("androidx.legacy:legacy-support-v4:1.0.0")
+    //    Room
     val versi_room = "2.5.2"
     implementation("androidx.room:room-runtime:$versi_room")
     implementation ("androidx.room:room-ktx:$versi_room")
