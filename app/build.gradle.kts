@@ -55,17 +55,42 @@ dependencies {
     val versi_room = "2.5.2"
     implementation("androidx.room:room-runtime:$versi_room")
     implementation ("androidx.room:room-ktx:$versi_room")
+    ksp("androidx.room:room-compiler:$versi_room")
 
 //    View Model
     val versi_lifecycle = "2.6.2"
     implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:$versi_lifecycle")
 //    Live Data
-    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.6.2")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:$versi_lifecycle")
 
 //    Yang Dibutuhkan ViewModel
     val versi_activity_ktx = "1.7.2"
     implementation ("androidx.activity:activity-ktx:$versi_activity_ktx")
 
+//    Retrofit
+    val versi_retrofit = "2.9.0"
+    implementation("com.squareup.retrofit2:retrofit:$versi_retrofit")
+    implementation("com.squareup.retrofit2:converter-gson:$versi_retrofit")
+
+//    Glide buat dapetin photo secara online
+    val versi_glide = "4.16.0"
+    implementation("com.github.bumptech.glide:glide:$versi_glide")
+
+//    Logging pake OKHTTP
+    val versi_okhttp = "4.11.0"
+    implementation("com.squareup.okhttp3:logging-interceptor:$versi_okhttp")
+
+//    Datastore
+    implementation("androidx.datastore:datastore-preferences:1.0.0")
+
+//    Coroutine
+    val versi_coroutine = "1.6.4"
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$versi_coroutine")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:$versi_coroutine")
+
+//    Other
+    androidTestImplementation ("androidx.room:room-testing:2.5.2")
+    implementation ("androidx.room:room-ktx:2.5.2")
 
     implementation("androidx.core:core-ktx:1.9.0")
     implementation("androidx.appcompat:appcompat:1.6.1")

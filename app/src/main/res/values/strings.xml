@@ -2,5 +2,16 @@
     <string name="app_name">YokiUserFinder.v2</string>
     <string name="title_toolbar">Yakali Masih Kena Plagiat</string>
 
+<!--    Back Button -->
+    <string name="btn_back">Kembali</string>
+
+<!--    Detail User -->
+    <string name="tv_followers">Followers</string>
+    <string name="tv_following">Following</string>
+
+<!--    Title Tab -->
+    <string name="tab1">Followers</string>
+    <string name="tab2">Following</string>
+
 
 </resources>
